@@ -47,3 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Load projects from data.json and display them
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const projectsContainer = document.querySelector('.projects-container');
+            if (projectsContainer && data.projects) {
+                data.projects.forEach(project => {
+                    const projectCard = document.createElement('div');
+                    projectCard.classList.add('card');
+                    projectCard.innerHTML = `
+                        <h3>${project.title}</h3>
+                        <p>${project.descriptio
