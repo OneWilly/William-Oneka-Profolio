@@ -13,7 +13,7 @@
         <h1 class="hero-title">William Oneka</h1>
         <p class="hero-subtitle">Information and Communication Technology Professional</p>
         <p class="hero-text">Currently advancing my software development skills at Power Learn Project</p>
-        <button class="learn-more-btn" onclick="scrollToSection('about')">
+        <button class="learn-more-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
             Learn More 
             <span class="arrow-right">→</span>
         </button>
@@ -55,7 +55,7 @@
                     <li>Image/video Segmentation and annotation</li>
                 </ul>
             </div>
-            <!-- More experience cards -->
+            <!-- More experience cards can be added here -->
         </div>
     </div>
 
@@ -68,16 +68,17 @@
                 <p class="institution">Gulu University</p>
                 <p class="year">Completed: 2025</p>
             </div>
-            <!-- More education cards -->
+            <!-- More education cards can be added here -->
         </div>
     </div>
-<!-- Projects Section -->
-<div id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <!-- Projects will be loaded here by script.js -->
+
+    <!-- Projects Section -->
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- Projects will be loaded here by script.js -->
+        </div>
     </div>
-</div>
 
     <!-- Contact Section -->
     <div class="contact">
@@ -102,6 +103,7 @@
         </div>
     </div>
 
+    <!-- Only include your script ONCE, here -->
     <script src="script.js"></script>
 </body>
 </html>

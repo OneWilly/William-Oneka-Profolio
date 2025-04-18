@@ -1,53 +1,4 @@
-
-// Smooth scroll functionality
-function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}
-
-// Add animation classes on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(card);
-    });
-});
-
-// Initialize any interactive elements
-document.addEventListener('DOMContentLoaded', function() {
-    const socialButtons = document.querySelectorAll('.social-btn');
-    
-    socialButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Add social media links here
-            if (button.classList.contains('github-btn')) {
-                window.open('https://github.com/yourusername', '_blank');
-            } else if (button.classList.contains('linkedin-btn')) {
-                window.open('https://linkedin.com/in/yourusername', '_blank');
-            }
-        });
-    });
-});
-// Load projects from data.json and display them
+// Dynamically load projects from data.json and display them in the Projects section
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data.json')
         .then(response => response.json())
@@ -59,4 +10,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     projectCard.classList.add('card');
                     projectCard.innerHTML = `
                         <h3>${project.title}</h3>
-                        <p>${project.descriptio
+                        <p>${project.description}</p>
+                        <a href="${project.link}" target="_blank">View Project</a>
+                    `;
+                    projectsContainer.appendChild(projectCard);
+                });
+            }
+        })
+        .catch(error => console.error('Error loading projects:', error));
+});
+
+// Smooth scroll for navigation (if you have nav links with href="#section")
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            e.preventDefault();
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Social button handlers
+document.querySelector('.github-btn')?.addEventListener('click', () => {
+    window.open('https://github.com/onewilly', '_blank');
+});
+document.querySelector('.linkedin-btn')?.addEventListener('click', () => {
+    window.open('https://linkedin.com/in/WilliamOneka', '_blank');
+});

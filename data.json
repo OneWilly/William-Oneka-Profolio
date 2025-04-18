@@ -1,19 +1,19 @@
 {
-    "projects": [
-      {
-        "title": "Portfolio Website",
-        "description": "A personal portfolio showcasing my skills and experience.",
-        "link": "https://onewilly.github.io/William-Oneka-Profolio/"
-      },
-      {
-        "title": "Data Analysis Project",
-        "description": "Analyzed large datasets to extract meaningful insights.",
-        "link": "https://github.com/onewilly/data-analysis-project"
-      },
-      {
-        "title": "E-commerce Website",
-        "description": "Developed a fully responsive e-commerce website with a shopping cart.",
-        "link": "https://github.com/onewilly/ecommerce-website"
-      }
-    ]
-  }
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio showcasing my skills and experience.",
+      "link": "https://onewilly.github.io/William-Oneka-Profolio/"
+    },
+    {
+      "title": "Data Analysis Project",
+      "description": "Analyzed large datasets to extract meaningful insights.",
+      "link": "https://github.com/onewilly/data-analysis-project"
+    },
+    {
+      "title": "E-commerce Website",
+      "description": "Developed a fully responsive e-commerce website with a shopping cart.",
+      "link": "https://github.com/onewilly/ecommerce-website"
+    }
+  ]
+}
