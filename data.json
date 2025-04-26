@@ -3,7 +3,9 @@
     {
       "title": "Portfolio Website",
       "description": "A personal portfolio showcasing my skills and experience.",
-      "link": "https://onewilly.github.io/William-Oneka-Profolio/"
+      "link": "https://onewilly.github.io/William-Oneka-Profolio/",
+      "image": "images/portfolio-thumb.jpg",
+      "technologies": ["HTML", "CSS", "JavaScript"]
     },
     {
       "title": "Data Analysis Project",
@@ -14,6 +16,28 @@
       "title": "E-commerce Website",
       "description": "Developed a fully responsive e-commerce website with a shopping cart.",
       "link": "https://github.com/onewilly/ecommerce-website"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "80%",
+      "image": "images/html-icon.png"
+    },
+    {
+      "name": "CSS",
+      "level": "75%",
+      "image": "images/css-icon.png"
+    },
+    {
+      "name": "JavaScript",
+      "level": "70%",
+      "image": "images/js-icon.png"
+    },
+    {
+      "name": "Python",
+      "level": "65%",
+      "image": "images/python-icon.png"
     }
   ]
 }
